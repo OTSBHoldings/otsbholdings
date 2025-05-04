@@ -37,16 +37,15 @@ const Navbar = () => {
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center space-x-8">
-          <Link to="/services" className="nav-link text-xs uppercase tracking-widest">Services</Link>
-          <Link to="/about" className="nav-link text-xs uppercase tracking-widest">About</Link>
-          <Link to="/team" className="nav-link text-xs uppercase tracking-widest">Team</Link>
-          <Link to="/portfolio" className="nav-link text-xs uppercase tracking-widest">Portfolio</Link>
-          <Link to="/investments" className="nav-link text-xs uppercase tracking-widest">Investments</Link>
+          <Link to="/" className="nav-link text-xs uppercase tracking-widest">Home</Link>
+          <Link to="/services" className="nav-link text-xs uppercase tracking-widest">Our Services</Link>
+          <Link to="/team" className="nav-link text-xs uppercase tracking-widest">Our Team</Link>
+          <Link to="/contact" className="nav-link text-xs uppercase tracking-widest">Contact Us</Link>
           <Link 
             to="/contact" 
             className="bg-gold hover:bg-gold/90 text-richBlack font-bold px-6 py-2 rounded-sm uppercase text-xs tracking-widest transition-all duration-300 nav-contact-shimmer"
           >
-            Contact
+            Book Demo
           </Link>
         </div>
 
@@ -70,46 +69,39 @@ const Navbar = () => {
       >
         <div className="px-4 py-4 space-y-2 border-t border-white/10">
           <Link 
+            to="/" 
+            className="nav-link text-base uppercase tracking-widest block py-3 text-center" 
+            onClick={() => setIsMobileMenuOpen(false)}
+          >
+            Home
+          </Link>
+          <Link 
             to="/services" 
             className="nav-link text-base uppercase tracking-widest block py-3 text-center" 
             onClick={() => setIsMobileMenuOpen(false)}
           >
-            Services
-          </Link>
-          <Link 
-            to="/about" 
-            className="nav-link text-base uppercase tracking-widest block py-3 text-center" 
-            onClick={() => setIsMobileMenuOpen(false)}
-          >
-            About
+            Our Services
           </Link>
           <Link 
             to="/team" 
             className="nav-link text-base uppercase tracking-widest block py-3 text-center" 
             onClick={() => setIsMobileMenuOpen(false)}
           >
-            Team
+            Our Team
           </Link>
           <Link 
-            to="/portfolio" 
+            to="/contact" 
             className="nav-link text-base uppercase tracking-widest block py-3 text-center" 
             onClick={() => setIsMobileMenuOpen(false)}
           >
-            Portfolio
-          </Link>
-          <Link 
-            to="/investments" 
-            className="nav-link text-base uppercase tracking-widest block py-3 text-center" 
-            onClick={() => setIsMobileMenuOpen(false)}
-          >
-            Investments
+            Contact Us
           </Link>
           <Link 
             to="/contact" 
             className="bg-gold hover:bg-gold/90 text-richBlack font-bold px-6 py-2 rounded-sm text-sm uppercase tracking-widest block w-full text-center mt-4 nav-contact-shimmer"
             onClick={() => setIsMobileMenuOpen(false)}
           >
-            Contact
+            Book Demo
           </Link>
         </div>
       </div>

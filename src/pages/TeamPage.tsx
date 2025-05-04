@@ -5,6 +5,7 @@ import Navbar from '../components/Navbar';
 import Team from '../components/Team';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
+import { Button } from '@/components/ui/button';
 
 const TeamPage = () => {
   return (
@@ -27,8 +28,13 @@ const TeamPage = () => {
               </h1>
               <div className="w-16 h-1 bg-gold mb-8"></div>
               <p className="text-white/80 text-xl leading-relaxed">
-                A collective of strategic minds who've mastered the art of transforming ambitious visions into market-dominating realities.
+                Your Unfair Advantage. We Don't Help. We Perform Brand Resurrection.
               </p>
+              <div className="mt-8">
+                <Button className="bg-gold hover:bg-gold/90 text-richBlack px-8 py-6 h-auto rounded-sm text-sm uppercase tracking-widest font-bold">
+                  Book Demo
+                </Button>
+              </div>
             </div>
           </div>
         </section>

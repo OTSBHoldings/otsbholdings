@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Facebook, Twitter, Instagram, Linkedin, ArrowUp } from 'lucide-react';
+import { Facebook, Instagram, Linkedin, ArrowUp } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Logo from './Logo';
 
@@ -35,9 +35,6 @@ const Footer = () => {
               <a href="#" className="text-white/60 hover:text-gold transition-colors duration-300" aria-label="Facebook">
                 <Facebook size={18} />
               </a>
-              <a href="#" className="text-white/60 hover:text-gold transition-colors duration-300" aria-label="Twitter">
-                <Twitter size={18} />
-              </a>
               <a href="#" className="text-white/60 hover:text-gold transition-colors duration-300" aria-label="Instagram">
                 <Instagram size={18} />
               </a>
@@ -48,45 +45,38 @@ const Footer = () => {
           </div>
           
           <div>
-            <h4 className="text-sm font-bold mb-6 uppercase tracking-wide">Navigate</h4>
+            <h4 className="text-sm font-bold mb-6 uppercase tracking-wide">Company</h4>
             <ul className="space-y-3 text-sm">
               <li><Link to="/" className="text-white/60 hover:text-gold transition-colors duration-300">Home</Link></li>
-              <li><Link to="/services" className="text-white/60 hover:text-gold transition-colors duration-300">Services</Link></li>
-              <li><Link to="/about" className="text-white/60 hover:text-gold transition-colors duration-300">About</Link></li>
-              <li><Link to="/portfolio" className="text-white/60 hover:text-gold transition-colors duration-300">Portfolio</Link></li>
-              <li><Link to="/investments" className="text-white/60 hover:text-gold transition-colors duration-300">Investments</Link></li>
-              <li><Link to="/contact" className="text-white/60 hover:text-gold transition-colors duration-300">Contact</Link></li>
+              <li><Link to="/team" className="text-white/60 hover:text-gold transition-colors duration-300">Our Team</Link></li>
+              <li><Link to="/services" className="text-white/60 hover:text-gold transition-colors duration-300">Our Services</Link></li>
+              <li><Link to="/contact" className="text-white/60 hover:text-gold transition-colors duration-300">Contact Us</Link></li>
             </ul>
           </div>
           
           <div>
             <h4 className="text-sm font-bold mb-6 uppercase tracking-wide">Services</h4>
             <ul className="space-y-3 text-sm">
-              <li><Link to="/services" className="text-white/60 hover:text-gold transition-colors duration-300">Brand Acquisition</Link></li>
-              <li><Link to="/services" className="text-white/60 hover:text-gold transition-colors duration-300">Brand Transformation</Link></li>
-              <li><Link to="/services" className="text-white/60 hover:text-gold transition-colors duration-300">Strategic Growth</Link></li>
-              <li><Link to="/services" className="text-white/60 hover:text-gold transition-colors duration-300">Performance Marketing</Link></li>
-              <li><Link to="/services" className="text-white/60 hover:text-gold transition-colors duration-300">Market Expansion</Link></li>
+              <li><Link to="/services" className="text-white/60 hover:text-gold transition-colors duration-300">Brand Development</Link></li>
+              <li><Link to="/services" className="text-white/60 hover:text-gold transition-colors duration-300">Creative Strategy</Link></li>
+              <li><Link to="/services" className="text-white/60 hover:text-gold transition-colors duration-300">Marketing & Digital Solutions</Link></li>
             </ul>
           </div>
           
           <div>
-            <h4 className="text-sm font-bold mb-6 uppercase tracking-wide">Contact</h4>
+            <h4 className="text-sm font-bold mb-6 uppercase tracking-wide">Contact Information</h4>
             <ul className="space-y-3 text-white/60 text-sm">
-              <li>Global Headquarters</li>
-              <li>123 Madison Avenue, Suite 500</li>
-              <li>New York, NY 10016</li>
-              <li>+1 (212) 555-8765</li>
-              <li>info@outsidethesuitbox.com</li>
+              <li>+1 (310) 795-2328</li>
+              <li>Info@OutsideTheSuitBox.com</li>
+              <li>3835 W 2nd St</li>
+              <li>Los Angeles, CA 90004</li>
+              <li>United States</li>
             </ul>
           </div>
         </div>
         
         <div className="border-t border-white/10 pt-8 text-center text-white/40">
           <p className="uppercase text-xs tracking-wider">© {new Date().getFullYear()} Outside the Suitbox. All rights reserved.</p>
-          <p className="text-xs mt-2">
-            <Link to="#" className="hover:text-gold transition-colors duration-300">Privacy Policy</Link> | <Link to="#" className="hover:text-gold transition-colors duration-300">Terms of Service</Link>
-          </p>
         </div>
       </div>
     </footer>

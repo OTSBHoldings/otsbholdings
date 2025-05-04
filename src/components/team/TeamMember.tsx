@@ -1,7 +1,12 @@
 
 import React, { useRef } from 'react';
-import { Linkedin, Twitter, Mail } from 'lucide-react';
 import { useIntersectionAnimation } from '../../hooks/useIntersectionAnimation';
+
+type SocialLink = {
+  icon: React.ReactNode;
+  url: string;
+  label: string;
+};
 
 type TeamMemberProps = {
   name: string;
@@ -9,9 +14,10 @@ type TeamMemberProps = {
   description: string;
   image: string;
   index: number;
+  socialLinks?: SocialLink[];
 };
 
-const TeamMember = ({ name, role, description, image, index }: TeamMemberProps) => {
+const TeamMember = ({ name, role, description, image, index, socialLinks = [] }: TeamMemberProps) => {
   const memberRef = useRef<HTMLDivElement>(null);
 
   useIntersectionAnimation({
@@ -40,17 +46,20 @@ const TeamMember = ({ name, role, description, image, index }: TeamMemberProps) 
         <p className="text-gold mb-2 uppercase text-xs tracking-wider">{role}</p>
         <p className="text-white/70 text-sm mb-4 leading-relaxed">{description}</p>
         
-        <div className="flex space-x-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-          <a href="#" className="text-white hover:text-gold transition-colors duration-300" aria-label={`${name}'s LinkedIn profile`}>
-            <Linkedin size={18} />
-          </a>
-          <a href="#" className="text-white hover:text-gold transition-colors duration-300" aria-label={`${name}'s Twitter profile`}>
-            <Twitter size={18} />
-          </a>
-          <a href="#" className="text-white hover:text-gold transition-colors duration-300" aria-label={`Email ${name}`}>
-            <Mail size={18} />
-          </a>
-        </div>
+        {socialLinks && socialLinks.length > 0 && (
+          <div className="flex space-x-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+            {socialLinks.map((link, idx) => (
+              <a 
+                key={idx}
+                href={link.url} 
+                className="text-white hover:text-gold transition-colors duration-300" 
+                aria-label={`${name}'s ${link.label} profile`}
+              >
+                {link.icon}
+              </a>
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );

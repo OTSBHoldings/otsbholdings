@@ -2,6 +2,7 @@
 import React, { useRef } from 'react';
 import { useIntersectionAnimation } from '../hooks/useIntersectionAnimation';
 import TeamMember from './team/TeamMember';
+import { Facebook, Linkedin, Instagram } from 'lucide-react';
 
 const Team = () => {
   const titleRef = useRef<HTMLDivElement>(null);
@@ -14,38 +15,67 @@ const Team = () => {
     {
       name: "Mark Eric Christiansen",
       role: "Founder & CEO",
-      description: "A maverick entrepreneur who turned conventional branding on its head. Mark doesn't just build brands—he creates cultural phenomena. Known for wearing T-shirts in boardrooms and turning wild ideas into million-dollar realities.",
-      image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=1000"
+      description: "A bold entrepreneur known for globally successful brands and groundbreaking ventures. Mark gets into the hearts of his audience, crafting narratives that ignite passion. The man in the back of the room wearing a T-shirt, shedding convention to envision the 'next big thing.' His pursuit of excellence transforms brands into cultural phenomena.",
+      image: "public/lovable-uploads/662b92c7-b0c4-4308-9c8c-fd8c0c5edf5c.png",
+      socialLinks: [
+        { icon: <Facebook size={18} />, url: "#", label: "Facebook" },
+        { icon: <Linkedin size={18} />, url: "#", label: "LinkedIn" },
+        { icon: <Instagram size={18} />, url: "#", label: "Instagram" },
+      ]
     },
     {
       name: "Nicolai Edgar Andersen",
       role: "Head of SEO & Search Marketing",
-      description: "The Norwegian SEO wizard who's forgotten more about digital marketing than most will ever know. With a track record of launching brands to #1 on Google, Nicolai turns data into gold. Multiple award winner who makes algorithms dance.",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=1000"
+      description: "A distinguished Norwegian digital marketer with a decade of cross-continental experience. Award-winning SEO specialist propelling websites to the top of Google in fiercely competitive markets. Passionate about emerging technologies and AI-powered solutions, mentoring teams and sharing insights globally.",
+      image: "public/lovable-uploads/4a50b7d4-8d33-43c3-b4d5-f9b4bf137794.png",
+      socialLinks: [
+        { icon: <Facebook size={18} />, url: "#", label: "Facebook" },
+        { icon: <Linkedin size={18} />, url: "#", label: "LinkedIn" },
+        { icon: <Instagram size={18} />, url: "#", label: "Instagram" },
+      ]
     },
     {
       name: "John Shepherd IV",
       role: "Marketing & Digital Integration Lead",
-      description: "The architect behind campaigns that don't just perform—they transform. John bridges the gap between crazy creative ideas and hardcore technical execution. Known for turning marketing funnels into profit machines.",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=1000"
+      description: "A forward-thinking entrepreneur blending marketing strategy with technical precision. John connects brands with ideal channels through influencer partnerships and optimized sales funnels. The bridge between creative vision and execution, ensuring branding translates into scalable results with fluency in both storytelling and systems.",
+      image: "public/lovable-uploads/fb51b3fa-2d66-432b-932b-71f7204bb828.png",
+      socialLinks: [
+        { icon: <Facebook size={18} />, url: "#", label: "Facebook" },
+        { icon: <Linkedin size={18} />, url: "#", label: "LinkedIn" },
+        { icon: <Instagram size={18} />, url: "#", label: "Instagram" },
+      ]
     },
     {
       name: "Stefano Lisci",
       role: "Visual Storytelling Director",
-      description: "Award-winning Italian filmmaker turned brand visionary. Stefano doesn't take photos—he crafts visual stories that sell. His work has dominated film festivals and transformed how brands connect with audiences.",
-      image: "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&q=80&w=1000"
+      description: "Italian film director and photographer based in Los Angeles, bringing products to life through striking visuals. His award-winning films showcase cinematic artistry with powerful storytelling. Stefano's innovative approach redefines how products are experienced, making him a sought-after creative in photography and design.",
+      image: "public/lovable-uploads/0760a365-a618-47f5-9d34-a06663af2da2.png",
+      socialLinks: [
+        { icon: <Facebook size={18} />, url: "#", label: "Facebook" },
+        { icon: <Linkedin size={18} />, url: "#", label: "LinkedIn" },
+        { icon: <Instagram size={18} />, url: "#", label: "Instagram" },
+      ]
     },
     {
       name: "Patrick Lowe",
       role: "Head of AI Solutions",
-      description: "The tech genius splitting time between LA and Amsterdam. Dual master's degree holder who makes AI feel human. Patrick doesn't follow tech trends—he creates them, turning complex AI into simple solutions that actually work.",
-      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=1000"
+      description: "Technology leader specializing in AI interfaces with offices in LA and Amsterdam. Holds dual master's degrees with extensive experience developing intuitive solutions. Patrick bridges complex technology with effective user experience, delivering systems that drive real-world results.",
+      image: "public/lovable-uploads/ee7b7197-6054-4058-a67e-65b8d8479bf1.png",
+      socialLinks: [
+        { icon: <Facebook size={18} />, url: "#", label: "Facebook" },
+        { icon: <Linkedin size={18} />, url: "#", label: "LinkedIn" },
+        { icon: <Instagram size={18} />, url: "#", label: "Instagram" },
+      ]
     },
     {
       name: "Catherine Alvarez Frias",
       role: "Head of Regulatory Affairs",
-      description: "The compliance mastermind who turns red tape into green lights. Catherine navigates the regulatory maze so you don't have to. She doesn't just solve compliance problems—she prevents them before they exist.",
-      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=1000"
+      description: "Distinguished authority in regulatory affairs with extensive history guiding businesses through compliance complexities. Catherine navigates intricate government regulations, FDA requirements, and local laws. Her talent for simplifying frameworks allows clients to focus on growth while managing compliance challenges.",
+      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=1000",
+      socialLinks: [
+        { icon: <Facebook size={18} />, url: "#", label: "Facebook" },
+        { icon: <Linkedin size={18} />, url: "#", label: "LinkedIn" },
+      ]
     }
   ];
 
@@ -62,7 +92,7 @@ const Team = () => {
           </h2>
           <div className="w-16 h-1 bg-gold mb-8"></div>
           <p className="text-xl text-white/70">
-            A collective of industry disruptors who turn conventional thinking into extraordinary results.
+            Unified Efforts, Limitless Achievements. A collective of industry disruptors who turn conventional thinking into extraordinary results.
           </p>
         </div>
 
@@ -75,8 +105,27 @@ const Team = () => {
               description={member.description}
               image={member.image}
               index={index}
+              socialLinks={member.socialLinks}
             />
           ))}
+        </div>
+
+        {/* Job Openings Section */}
+        <div className="mt-20 text-center px-6 md:px-0">
+          <div className="max-w-3xl mx-auto">
+            <h3 className="text-2xl md:text-3xl font-display font-bold mb-4 uppercase">
+              Job <span className="gold-text">Openings</span>
+            </h3>
+            <p className="text-lg text-white/70 mb-6">
+              Ready to turn your daily grind into a passion? Never miss an opportunity at our Los Angeles brand agency — bookmark this page for the latest job openings!
+            </p>
+            <a 
+              href="/contact" 
+              className="inline-block bg-gold hover:bg-gold/90 text-richBlack font-bold px-8 py-3 rounded-sm uppercase text-sm tracking-widest transition-all duration-300 nav-contact-shimmer"
+            >
+              Contact Us
+            </a>
+          </div>
         </div>
       </div>
     </section>
