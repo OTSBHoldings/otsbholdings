@@ -1,16 +1,19 @@
 
-import React, { useRef } from 'react';
+import React, { useRef, useEffect } from 'react';
 import { useIntersectionAnimation } from '../hooks/useIntersectionAnimation';
 import TeamMember from './team/TeamMember';
 import { Facebook, Linkedin, Instagram } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 const Team = () => {
   const titleRef = useRef<HTMLDivElement>(null);
+  const jobsRef = useRef<HTMLDivElement>(null);
 
   useIntersectionAnimation({
-    refs: [titleRef],
+    refs: [titleRef, jobsRef],
   });
 
+  // Team members data with updated image paths and descriptions
   const team = [
     {
       name: "Mark Eric Christiansen",
@@ -38,7 +41,7 @@ const Team = () => {
       name: "John Shepherd IV",
       role: "Marketing & Digital Integration Lead",
       description: "A forward-thinking entrepreneur blending marketing strategy with technical precision. John connects brands with ideal channels through influencer partnerships and optimized sales funnels. The bridge between creative vision and execution, ensuring branding translates into scalable results with fluency in both storytelling and systems.",
-      image: "public/lovable-uploads/fb51b3fa-2d66-432b-932b-71f7204bb828.png",
+      image: "public/lovable-uploads/cd8748c5-25ca-4849-8b0d-d887fcdcbe96.png", // Updated with the new image
       socialLinks: [
         { icon: <Facebook size={18} />, url: "#", label: "Facebook" },
         { icon: <Linkedin size={18} />, url: "#", label: "LinkedIn" },
@@ -60,7 +63,7 @@ const Team = () => {
       name: "Patrick Lowe",
       role: "Head of AI Solutions",
       description: "Technology leader specializing in AI interfaces with offices in LA and Amsterdam. Holds dual master's degrees with extensive experience developing intuitive solutions. Patrick bridges complex technology with effective user experience, delivering systems that drive real-world results.",
-      image: "public/lovable-uploads/ee7b7197-6054-4058-a67e-65b8d8479bf1.png",
+      image: "public/lovable-uploads/ee7b7197-6054-4058-a67e-65b8d8479bf1.png", // This is now Patrick
       socialLinks: [
         { icon: <Facebook size={18} />, url: "#", label: "Facebook" },
         { icon: <Linkedin size={18} />, url: "#", label: "LinkedIn" },
@@ -71,7 +74,7 @@ const Team = () => {
       name: "Catherine Alvarez Frias",
       role: "Head of Regulatory Affairs",
       description: "Distinguished authority in regulatory affairs with extensive history guiding businesses through compliance complexities. Catherine navigates intricate government regulations, FDA requirements, and local laws. Her talent for simplifying frameworks allows clients to focus on growth while managing compliance challenges.",
-      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=1000",
+      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=1000", // Catherine is the 5th person
       socialLinks: [
         { icon: <Facebook size={18} />, url: "#", label: "Facebook" },
         { icon: <Linkedin size={18} />, url: "#", label: "LinkedIn" },
@@ -80,7 +83,7 @@ const Team = () => {
   ];
 
   return (
-    <section id="team" className="section-padding bg-richBlack-light pt-20 pb-20" aria-label="Team section">
+    <section id="team" className="section-padding bg-richBlack-light pt-24 pb-24" aria-label="Team section">
       <div className="container mx-auto">
         <div 
           ref={titleRef}
@@ -110,21 +113,34 @@ const Team = () => {
           ))}
         </div>
 
-        {/* Job Openings Section */}
-        <div className="mt-20 text-center px-6 md:px-0">
-          <div className="max-w-3xl mx-auto">
-            <h3 className="text-2xl md:text-3xl font-display font-bold mb-4 uppercase">
-              Job <span className="gold-text">Openings</span>
-            </h3>
-            <p className="text-lg text-white/70 mb-6">
-              Ready to turn your daily grind into a passion? Never miss an opportunity at our Los Angeles brand agency — bookmark this page for the latest job openings!
-            </p>
-            <a 
-              href="/contact" 
-              className="inline-block bg-gold hover:bg-gold/90 text-richBlack font-bold px-8 py-3 rounded-sm uppercase text-sm tracking-widest transition-all duration-300 nav-contact-shimmer"
-            >
-              Contact Us
-            </a>
+        {/* Job Openings Section with enhanced design */}
+        <div 
+          ref={jobsRef}
+          className="mt-28 px-6 md:px-0 opacity-0 translate-y-10 transition-all duration-700 ease-out"
+        >
+          <div className="max-w-3xl mx-auto bg-richBlack-dark/50 p-10 rounded-md border border-gold/10 relative overflow-hidden backdrop-blur-sm">
+            <div className="absolute inset-0 bg-gradient-to-br from-gold/5 to-transparent"></div>
+            <div className="relative z-10">
+              <h3 className="text-2xl md:text-3xl font-display font-bold mb-6 uppercase text-center">
+                Job <span className="gold-text">Openings</span>
+              </h3>
+              <div className="w-12 h-1 bg-gold mx-auto mb-8"></div>
+              <p className="text-lg text-white/70 mb-8 text-center max-w-2xl mx-auto">
+                Ready to turn your daily grind into a passion? Never miss an opportunity at our Los Angeles brand agency — bookmark this page for the latest job openings!
+              </p>
+              <div className="flex justify-center">
+                <a 
+                  href="/contact" 
+                  className="inline-block bg-gold hover:bg-gold/90 text-richBlack font-bold px-8 py-4 rounded-sm uppercase text-sm tracking-widest transition-all duration-300 shimmer-effect"
+                >
+                  Contact Us
+                </a>
+              </div>
+            </div>
+            
+            {/* Decorative elements */}
+            <div className="absolute top-5 right-5 w-20 h-20 border border-gold/10 rounded-full"></div>
+            <div className="absolute bottom-10 left-10 w-16 h-16 border border-gold/5 rounded-full"></div>
           </div>
         </div>
       </div>
