@@ -41,7 +41,7 @@ const Team = () => {
       name: "John Shepherd IV",
       role: "Marketing & Digital Integration Lead",
       description: "A forward-thinking entrepreneur blending marketing strategy with technical precision. John connects brands with ideal channels through influencer partnerships and optimized sales funnels. The bridge between creative vision and execution, ensuring branding translates into scalable results with fluency in both storytelling and systems.",
-      image: "public/lovable-uploads/cd8748c5-25ca-4849-8b0d-d887fcdcbe96.png", // Updated with the new image
+      image: "public/lovable-uploads/cd8748c5-25ca-4849-8b0d-d887fcdcbe96.png", 
       socialLinks: [
         { icon: <Facebook size={18} />, url: "#", label: "Facebook" },
         { icon: <Linkedin size={18} />, url: "#", label: "LinkedIn" },
@@ -60,24 +60,24 @@ const Team = () => {
       ]
     },
     {
+      name: "Catherine Alvarez Frias",
+      role: "Head of Regulatory Affairs",
+      description: "Distinguished authority in regulatory affairs with extensive history guiding businesses through compliance complexities. Catherine navigates intricate government regulations, FDA requirements, and local laws. Her talent for simplifying frameworks allows clients to focus on growth while managing compliance challenges.",
+      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=1000", 
+      socialLinks: [
+        { icon: <Facebook size={18} />, url: "#", label: "Facebook" },
+        { icon: <Linkedin size={18} />, url: "#", label: "LinkedIn" },
+      ]
+    },
+    {
       name: "Patrick Lowe",
       role: "Head of AI Solutions",
       description: "Technology leader specializing in AI interfaces with offices in LA and Amsterdam. Holds dual master's degrees with extensive experience developing intuitive solutions. Patrick bridges complex technology with effective user experience, delivering systems that drive real-world results.",
-      image: "public/lovable-uploads/ee7b7197-6054-4058-a67e-65b8d8479bf1.png", // This is now Patrick
+      image: "public/lovable-uploads/ee7b7197-6054-4058-a67e-65b8d8479bf1.png",
       socialLinks: [
         { icon: <Facebook size={18} />, url: "#", label: "Facebook" },
         { icon: <Linkedin size={18} />, url: "#", label: "LinkedIn" },
         { icon: <Instagram size={18} />, url: "#", label: "Instagram" },
-      ]
-    },
-    {
-      name: "Catherine Alvarez Frias",
-      role: "Head of Regulatory Affairs",
-      description: "Distinguished authority in regulatory affairs with extensive history guiding businesses through compliance complexities. Catherine navigates intricate government regulations, FDA requirements, and local laws. Her talent for simplifying frameworks allows clients to focus on growth while managing compliance challenges.",
-      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=1000", // Catherine is the 5th person
-      socialLinks: [
-        { icon: <Facebook size={18} />, url: "#", label: "Facebook" },
-        { icon: <Linkedin size={18} />, url: "#", label: "LinkedIn" },
       ]
     }
   ];
